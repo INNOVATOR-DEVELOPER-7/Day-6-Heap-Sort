@@ -1,2 +1,30 @@
 # Day-6-Heap-Sort
 Here Python Program for Heap Sort. Day 6 of Day 365.
+- Initial Setup: Build a max heap from the input array.
+  - A max heap is a complete binary tree where the value of each node is greater than or equal to the values of its children.
+- Heap Construction: Start from the last non-leaf node and move upwards, ensuring each subtree satisfies the max heap property.
+- Extracting Elements:
+  - Swap the root (maximum value) with the last element in the heap.
+  - Reduce the heap size by one.
+  - Restore the heap property by heapifying the root.
+- Repeat Extraction: Continue the extraction and heapify process until the heap size is reduced to one.
+
+Here's a visual representation using the example array [4, 10, 3, 5, 1]:
+
+1. Initial Array: [4, 10, 3, 5, 1]
+2. Build Max Heap:
+   - Max heap: [10, 5, 3, 4, 1]
+3. First Extraction:
+   - Swap 10 and 1: [1, 5, 3, 4, 10]
+   - Heap size reduced to 4, heapify the root: [5, 4, 3, 1, 10]
+4. Second Extraction:
+   - Swap 5 and 1: [1, 4, 3, 5, 10]
+   - Heap size reduced to 3, heapify the root: [4, 1, 3, 5, 10]
+5. Third Extraction:
+   - Swap 4 and 3: [3, 1, 4, 5, 10]
+   - Heap size reduced to 2, heapify the root: [3, 1, 4, 5, 10]
+6. Fourth Extraction:
+   - Swap 3 and 1: [1, 3, 4, 5, 10]
+   - Heap size reduced to 1, array is sorted: [1, 3, 4, 5, 10]
+
+The final sorted array is [1, 3, 4, 5, 10].
